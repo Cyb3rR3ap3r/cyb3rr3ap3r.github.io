@@ -1,5 +1,4 @@
 ---
-published: true
 layout: page
 title: TryHackMe - Relevent
 permalink: /posts/ctf/tryhackme/relevent.html
