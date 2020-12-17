@@ -1,11 +1,9 @@
 ---
 layout: page
 title: TryHackMe - Relevent
-permalink: /ctf.html
-published: true
+permalink: /posts/ctf/tryhackme/relevent.html
 ---
 
-test
 ## TryHackMe - Relevent Walkthrough
 
 
