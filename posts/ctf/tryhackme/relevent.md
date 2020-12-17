@@ -2,9 +2,9 @@
 layout: page
 title: TryHackMe - Relevent
 permalink: /posts/ctf/tryhackme/relevent.html
+published: true
 ---
 
-test
 ## TryHackMe - Relevent Walkthrough
 
 
