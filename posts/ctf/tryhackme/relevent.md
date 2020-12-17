@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TryHackMe - Relevent
-permalink: /posts/ctf/tryhackme/relevent.html
+permalink: /ctf.html
 published: true
 ---
 
