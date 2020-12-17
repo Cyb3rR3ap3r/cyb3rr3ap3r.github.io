@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: CTF Walkthroughs
 permalink: /ctf/
 ---
