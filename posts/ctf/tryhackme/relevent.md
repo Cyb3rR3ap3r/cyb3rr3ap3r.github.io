@@ -6,6 +6,6 @@ published: true
 
 ### Run nmap
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac4b6604-0678-4ea6-a183-c693ba9879e8/86240123d7ef496e9efdbf9ad8482a64.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac4b6604-0678-4ea6-a183-c693ba9879e8/86240123d7ef496e9efdbf9ad8482a64.png)
+![image](https://user-images.githubusercontent.com/50459517/102490170-17ff0c80-4034-11eb-97e2-9c3e32d11984.png)
 
 As we can see we have a few interesting ports open. Lets check out the 2 http ports
