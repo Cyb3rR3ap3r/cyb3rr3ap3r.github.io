@@ -1,10 +1,10 @@
 ---
 layout: page
 title: CTF Walkthroughs
-permalink: /ctf/
+permalink: /ctf.html
 ---
 
 # CTF Walkthroughs
 ----
 
-## [TryHackMe - Relevent](https://cyb3rr3ap3r.github.io/posts/ctf/tryhackme/relevent/)
+## [TryHackMe - Relevent](https://cyb3rr3ap3r.github.io/posts/ctf/tryhackme/relevent.html)
