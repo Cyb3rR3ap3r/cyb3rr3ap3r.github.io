@@ -1,3 +1,4 @@
+
 ---
 layout: default
 published: true
@@ -7,8 +8,9 @@ published: true
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
-<div>
-    <article>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
       <h1>root@kali:~# whoami</h1>
       <p>  Hi, my name is Trevor Isenberg aka Cyb3rR3ap3r.  I am an IT professional looking to move into the CyberSecurity field.  I want to give back to the InfoSec community so I decided to start this blog that will host various CTF walkthroughs as well as other interesting posts related to InfoSec.</p>
       <p>  So what makes these CTF Walkthroughs different then others you may find?  Each walkthrough will include a sample pentest report that will outline all potenital vulnerabilities that machine my have (At least the ones I can find).  </p>
