@@ -1,3 +1,8 @@
+---
+layout: page
+title: CTF Walkthroughs
+permalink: /ctf/
+---
 
 # CTF Walkthroughs
 ----
