@@ -9,9 +9,9 @@ permalink: /posts/ctf/cyberseclabs/shock.html
 
 First things first, lets run our nmap scan.  I use a custom script that scans for ports then passes those open ports to nmap for service enumeration, however you can achieve the same results with the below command.
 
-```
+``
 nmap -p- -A 172.31.1.3
-```
+``
 
 ![image](https://user-images.githubusercontent.com/50459517/102672581-cb602200-4156-11eb-8dc0-56c5dcf085d2.png)
 
@@ -21,9 +21,9 @@ We see we have a few ports open.  21, 22 and 80.  I normally like to check out p
 
 After some manual enumeration of the webpages and source code, nothing seems to jump out at me.  So lets scan for some directories.  I like to use _dirsearch_ for this, but any directory busting tool should work just fine.
 
-```
+``
 dirsearch -u http://172.31.1.3/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x 400,500 -e php,txt,html -f -t 100
-```
+``
 
 While that is running, lets look at port 21 and see if we can anonymously log in.
 
