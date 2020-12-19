@@ -11,7 +11,7 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 test
 
-```nmap -p- -A 172.31.1.3```
+>> nmap -p- -A 172.31.1.3
 
 ![image](https://user-images.githubusercontent.com/50459517/102672581-cb602200-4156-11eb-8dc0-56c5dcf085d2.png)
 
