@@ -6,10 +6,10 @@ permalink: /posts/ctf/cyberseclabs/shock.html
 
 # Shock - CyberSecLabs
 ----
-![image](https://user-images.githubusercontent.com/50459517/102675455-0d8d6180-415f-11eb-9376-ff7d4ff84a1e.png)
 
 - OS: Linux
 - Level: Easy
+- Vulns Found: 2
 
 
 First things first, lets run our nmap scan.  I use a custom script that scans for ports then passes those open ports to nmap for service enumeration, however you can achieve the same results with the below command.
