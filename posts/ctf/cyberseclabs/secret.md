@@ -1,3 +1,13 @@
+---
+layout: page
+title: Secret - CyberSecLabs
+permalink: /posts/ctf/cyberseclabs/secret.html
+---
+
+# Secret - CyberSecLabs
+----
+
+
 First things first, lets run our nmap scan.  I use a custom script that scans for ports then passes those open ports to nmap for service enumeration, however you can achieve the same results with the below command.
 
 `nmap -p- -A 172.31.1.4`
