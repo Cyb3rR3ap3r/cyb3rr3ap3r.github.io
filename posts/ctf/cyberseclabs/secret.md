@@ -110,7 +110,7 @@ We can get more information by right clicking on the line and clicking on Help. 
 
 ![image](https://user-images.githubusercontent.com/50459517/103783554-7d746680-4ffe-11eb-82ce-f5646ef6668a.png)
 
-After reading, we can see all we have to do is run **net group "Domain Admins" bdover /add /domain** to **add bdover** to the **Domain Admins** group
+After reading, we can see all we have to do is run **net group "Domain Admins" bdover /add /domain** to add **bdover** to the **Domain Admins** group
 
 ![image](https://user-images.githubusercontent.com/50459517/103783588-882efb80-4ffe-11eb-9c77-fd4a74a56162.png)
 
