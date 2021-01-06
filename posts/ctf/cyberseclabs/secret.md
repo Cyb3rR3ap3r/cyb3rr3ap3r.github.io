@@ -72,7 +72,7 @@ Seems like the server may be blocking this connection.  Maybe due to permissions
 
 ![image](https://user-images.githubusercontent.com/50459517/103783291-253d6480-4ffe-11eb-8966-297a867022f0.png)
 
-I completed missed something in the **ncrack** results, both "joecakes" and "jcakes" username returned as positive usernames, and it looks like **jcakes** successfully authenticates with the AD server, meaning the other usernames are most likely false positives.  However it looks like none of the shares are writeable. 
+I completely missed something in the **ncrack** results, both "joecakes" and "jcakes" username returned as positive usernames, and it looks like **jcakes** successfully authenticates with the AD server, meaning the other usernames are most likely false positives.  However it looks like none of the shares are writeable. 
 
 Since we know these seem to be valid credentials, lets try to use **evil-winrm** to get a shell.
 
