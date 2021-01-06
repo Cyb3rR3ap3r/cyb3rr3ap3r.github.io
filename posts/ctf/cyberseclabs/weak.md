@@ -13,7 +13,7 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 ![image](https://user-images.githubusercontent.com/50459517/103789467-a9dfb100-5005-11eb-9164-5fb734a473da.png)
 
-Looks like we have serveral interesting ports open.  First thing I notice in the nmap output if the FTP results.  It looks like the contents for anonymous login are files found in a default IIS page.  We have IIS running on port 80 so lets see if it is a default page or not.
+Looks like we have serveral interesting ports open.  First thing I notice in the nmap output is the FTP results.  It looks like the contents for anonymous login are files found in a default IIS page.  We have IIS running on port 80 so lets see if it is a default page or not.
 
 ![image](https://user-images.githubusercontent.com/50459517/103789497-b49a4600-5005-11eb-9882-88dc5d139acc.png)
 
@@ -25,7 +25,7 @@ I was getting an error saying the server cannot accept the argument **ls** which
 
 ![image](https://user-images.githubusercontent.com/50459517/103789571-c976d980-5005-11eb-9824-41e38f57b896.png)
 
-It looks like it is using the **PORT** command with some arguments which I'm not for sure why.  I read up and someone suggested to try in passive mode.  So I switched and now everything seems good.
+It looks like it is using the **PORT** command with some arguments that look like my IP address which I'm not for sure why.  I read up and someone suggested to try in passive mode as it may be a connection issue with active mode.  So I switched and now everything seems good.
 
 ![image](https://user-images.githubusercontent.com/50459517/103789600-d4316e80-5005-11eb-88aa-1c643e9066f7.png)
 
@@ -59,7 +59,7 @@ Hmmm.  Looks like someone is using an insecure password.  We can assume it is no
 
 ![image](https://user-images.githubusercontent.com/50459517/103789933-31c5bb00-5006-11eb-9fe8-e03b0eac3fbb.png)
 
-Since we are current Alpha Site, lets see if we can authenticate with Web Admin.  I tried a few default passwords like **admin**, **password**, etc. All failed and I thought I would try to brute force untill I tried "**Password"** which is what was in the **README** file.  I got a message saying it could not access because of insufficient user privileges.  This is good as it indicates we have a valid set of creds, just can't be used via RDP.
+Since we are currently Alpha Site, lets see if we can authenticate with Web Admin.  I tried a few default passwords like **admin**, **password**, etc. All failed and I thought I would try to brute force untill I tried "**Password"** which is what was in the **README** file.  I got a message saying it could not access because of insufficient user privileges.  This is good as it indicates we have a valid set of creds, just can't be used via RDP.
 
 ![image](https://user-images.githubusercontent.com/50459517/103789965-3b4f2300-5006-11eb-874e-086a8ab17961.png)
 
