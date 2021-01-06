@@ -8,6 +8,7 @@ permalink: /ctf.html
 ----
 ## CyberSecLabs
 ### [Shock](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/shock.html)
+### [Secret](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/secret.html)
 
 ----
 ## TryHackMe
