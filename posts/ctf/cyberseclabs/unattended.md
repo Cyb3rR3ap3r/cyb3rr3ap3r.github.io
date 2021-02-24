@@ -14,11 +14,11 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 ![image](https://user-images.githubusercontent.com/50459517/109046363-45061600-769a-11eb-8b40-c316c61ef07e.png)
 
-First lets check out HTTP
+Looks like we have a few interesting ports open.  First lets check out HTTP
 
 ![image](https://user-images.githubusercontent.com/50459517/109046400-4d5e5100-769a-11eb-9129-6c397a3ca493.png)
 
-I looked up a potential RCE exploit for this version of HttpFileServer
+It seems to be running HttpFileServer.  I looked up a potential RCE exploit for this version of HttpFileServer
 
 [Offensive Security's Exploit Database Archive](https://www.exploit-db.com/exploits/39161)
 
