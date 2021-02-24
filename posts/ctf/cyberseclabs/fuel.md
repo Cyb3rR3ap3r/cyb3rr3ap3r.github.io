@@ -15,11 +15,11 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 ![image](https://user-images.githubusercontent.com/50459517/109032719-8d6a0780-768b-11eb-8e02-5ee7469b6f5f.png)
 
-Lets check out port 80
+Looke like we have a couple of ports open.  Lets check out port 80
 
 ![image](https://user-images.githubusercontent.com/50459517/109032751-95c24280-768b-11eb-9478-df37555e46c1.png)
 
-Looks like we have FuelCMS here.  According to the robots.txt results from the nmap scan, /fuel is disallowed for serach engines so lets go there and see what we can find.
+Looks like we have FuelCMS here.  According to the robots.txt results from the nmap scan, /fuel is disallowed for search engines so lets go there and see what we can find.
 
 ![image](https://user-images.githubusercontent.com/50459517/109032788-9eb31400-768b-11eb-83cc-41029f30987a.png)
 
