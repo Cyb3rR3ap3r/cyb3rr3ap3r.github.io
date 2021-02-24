@@ -31,7 +31,7 @@ After some enumeration of these respostories, I found some activity where jonath
 
 ![image](https://user-images.githubusercontent.com/50459517/109025065-006f8000-7684-11eb-873e-9f0c7c549ffe.png)
 
-Looked like jonathan hard coded his password into the **config.php** file then decided to remove.  Lucky for us he didn't remove any of the activity history.  Lets try to login as jonathan and see what we can find.
+Looks like jonathan hard coded his password into the **config.php** file then decided to remove.  Lucky for us he didn't remove any of the activity history.  Lets try to login as jonathan and see what we can find.
 
 ![image](https://user-images.githubusercontent.com/50459517/109025116-0f563280-7684-11eb-8e48-648405012a3c.png)
 
