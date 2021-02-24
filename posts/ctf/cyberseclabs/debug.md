@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Debug - CyberSecLabs
-permalink: /posts/ctf/cyberseclabs/deployable.html
+permalink: /posts/ctf/cyberseclabs/debug.html
 ---
 
 # Debug - CyberSecLabs
