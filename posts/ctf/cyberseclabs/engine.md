@@ -12,21 +12,21 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 `nmap -p- -A 172.31.1.16`
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a286e059-1c9a-4dc9-9598-9c04f46d7bf9/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a286e059-1c9a-4dc9-9598-9c04f46d7bf9/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043545-13d81680-7697-11eb-8759-8edfeb3c1636.png)
 
 Checking out the web server on port 80, we see a default IIS page.  So I started a directory buster and found a directory called **/blog** so lets check that out.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98249ad9-8f47-4b04-aa36-ac098a69aed5/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98249ad9-8f47-4b04-aa36-ac098a69aed5/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043587-1e92ab80-7697-11eb-85e2-447ee578fbd8.png)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d95deaa0-3fa5-4a69-841f-c13cf8c7bd7b/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d95deaa0-3fa5-4a69-841f-c13cf8c7bd7b/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043630-281c1380-7697-11eb-920f-153fe324c921.png)
 
 Looks like we have a blog running **BlogEngine.NET**. I click on the log in button and found the default creds of **admin:admin** was successfully and now I have access to the admin panel.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bfeae591-2cc9-446c-9dc0-1ea990f83162/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bfeae591-2cc9-446c-9dc0-1ea990f83162/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043699-3833f300-7697-11eb-808c-6f7995773a78.png)
 
 After spending some time trying to find a way to upload and execute a reverse shell, I found a version of **[BlogEngine.NET](http://blogengine.NET)** so I decided to look into a possible public vulnerability.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9705f6dc-4374-42b3-bfd6-d144083043c4/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9705f6dc-4374-42b3-bfd6-d144083043c4/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043745-44b84b80-7697-11eb-8f0a-d03ba86e304c.png)
 
 I found a vulnerability that allows for remote code execution via LFI per **CVE-2019-6714** that worked well.
 
@@ -34,12 +34,12 @@ I found a vulnerability that allows for remote code execution via LFI per **CVE-
 
 After following these I was able to get the initial shell onto the machine
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/095b2736-a9d5-44a4-8260-2f0da575e26d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/095b2736-a9d5-44a4-8260-2f0da575e26d/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043793-513ca400-7697-11eb-8fea-b9f46f6cdd8a.png)
 
 I then uploaded **WinPEAS** to the machine and found some AutoLogin creds for the Administrator account.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c4f001e-08cb-4def-8a91-8ef428159226/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4c4f001e-08cb-4def-8a91-8ef428159226/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043847-5d286600-7697-11eb-9209-d4f3a272e39d.png)
 
 I used these credentials to log into the machine via WinRM using **evil-winrm**
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7dce6ab1-5ded-42db-a73e-7540a62c0b03/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7dce6ab1-5ded-42db-a73e-7540a62c0b03/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109043895-674a6480-7697-11eb-9300-98f33b7bee74.png)
