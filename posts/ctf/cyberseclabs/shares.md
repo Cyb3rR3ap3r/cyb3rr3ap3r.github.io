@@ -14,7 +14,7 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 ![image](https://user-images.githubusercontent.com/50459517/109027534-842a6c00-7686-11eb-9051-4268f8dcc2da.png)
 
-Looks like we have a few interesting things open.  After looking, I believe we will need to check out nfs and see what shares we have access.  However I first started with FTP and HTTP just to see what was there.
+Looks like we have a few interesting things open.  After looking, I believe we will need to check out NFS and see what shares we have access.  However I first started with FTP and HTTP just to see what was there.
 
 FTP didn't allow for anonymous login so nothing there.  HTTP was just a static site for a Pet Shop.  I enumerated for directories while checking out NFS and that returned nothing as well.  So lets focus on NFS for now.
 
@@ -60,7 +60,7 @@ I spent some time with the binary **pkexec** first but didn't get anywhere.. So 
 
 ![image](https://user-images.githubusercontent.com/50459517/109027920-e6836c80-7686-11eb-818e-1ca65e9bdb4f.png)
 
-Now that we are **amy** we can run LinPEAS again and see if we can find a path to root
+Now that we are **amy** we can run **LinPEAS** again and see if we can find a path to root
 
 ![image](https://user-images.githubusercontent.com/50459517/109027957-ef743e00-7686-11eb-8ec1-a0461b18a30c.png)
 
