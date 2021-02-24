@@ -9,6 +9,7 @@ permalink: /ctf.html
 ## CyberSecLabs
 **[Debug - Linux](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/debug.html)**  
 **[Deployable - Windows](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/deployable.html)**  
+**[Fuel - Linux](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/fuel.html)**  
 **[Leakage - Linux](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/leakage.html)**  
 **[Outdated - Linux](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/outdated.html)**  
 **[Secret - Windows](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/secret.html)**  
