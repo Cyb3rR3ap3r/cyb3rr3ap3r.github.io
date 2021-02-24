@@ -15,7 +15,7 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 ![image](https://user-images.githubusercontent.com/50459517/109021751-cb156300-7680-11eb-90a4-873c885cfa6f.png)
 
-Looks like we only have 2 ports open, lets check out the web site on port 80
+Looks like we only have 2 ports open, lets check out the web site on port 80 first.
 
 ![image](https://user-images.githubusercontent.com/50459517/109021814-d8cae880-7680-11eb-9c6f-08bb45af8d35.png)
 
