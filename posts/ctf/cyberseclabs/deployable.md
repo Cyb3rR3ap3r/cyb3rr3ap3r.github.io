@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Deployable - CyberSecLabs
 permalink: /posts/ctf/cyberseclabs/deployable.html
 ---
