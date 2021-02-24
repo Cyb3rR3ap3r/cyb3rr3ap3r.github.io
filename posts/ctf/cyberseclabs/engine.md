@@ -18,13 +18,13 @@ Checking out the web server on port 80, we see a default IIS page.  So I started
 
 ![image](https://user-images.githubusercontent.com/50459517/109043587-1e92ab80-7697-11eb-85e2-447ee578fbd8.png)
 
-![image](https://user-images.githubusercontent.com/50459517/109043630-281c1380-7697-11eb-920f-153fe324c921.png)
+![image](https://user-images.githubusercontent.com/50459517/109044231-c5774780-7697-11eb-88cf-4cbd030425eb.png)
 
 Looks like we have a blog running **BlogEngine.NET**. I click on the log in button and found the default creds of **admin:admin** was successfully and now I have access to the admin panel.
 
 ![image](https://user-images.githubusercontent.com/50459517/109043699-3833f300-7697-11eb-808c-6f7995773a78.png)
 
-After spending some time trying to find a way to upload and execute a reverse shell, I found a version of **[BlogEngine.NET](http://blogengine.NET)** so I decided to look into a possible public vulnerability.
+After spending some time trying to find a way to upload and execute a reverse shell, I found a version of BlogEngine.NET so I decided to look into a possible public vulnerability.
 
 ![image](https://user-images.githubusercontent.com/50459517/109043745-44b84b80-7697-11eb-8f0a-d03ba86e304c.png)
 
