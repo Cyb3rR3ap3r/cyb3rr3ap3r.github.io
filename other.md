@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Other
-permalink: /other
 ---
 
 # How Things Work with Wireshark
