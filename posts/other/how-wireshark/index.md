@@ -1,7 +1,6 @@
 ---
 layout: page
 title: How Things Work with Wireshark
-permalink: /other/how-wireshark/index.html
 ---
 
 # How Things Work with Wireshark
