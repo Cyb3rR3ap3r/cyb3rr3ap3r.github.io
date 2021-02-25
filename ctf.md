@@ -21,3 +21,7 @@ permalink: /ctf.html
 **[Unattended - Windows](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/unattended.html)**  
 **[Weak - Windows](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/weak.html)**  
 
+
+----
+## HackTheBox
+**[Bashed - Linux](https://cyb3rr3ap3r.github.io/posts/ctf/hackthebox/bashed.html)**  
