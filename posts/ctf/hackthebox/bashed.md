@@ -4,7 +4,7 @@ title: Bashed - HackTheBox
 permalink: /posts/ctf/hackthebox/bashed.html
 ---
 
-# Debug - CyberSecLabs
+# Bashed - HackTheBox
 ----
 
 
