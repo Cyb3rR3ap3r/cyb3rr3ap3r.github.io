@@ -4,7 +4,7 @@ title: CTF Walkthroughs
 permalink: /ctf.html
 ---
 
-# CTF Walkthroughs
+
 ----
 ## CyberSecLabs
 **[Debug - Linux](https://cyb3rr3ap3r.github.io/posts/ctf/cyberseclabs/debug.html)**  
