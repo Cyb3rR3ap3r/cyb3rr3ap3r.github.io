@@ -46,7 +46,7 @@ Now that we are the **scriptmanager** user, we can enumerate the machine to see 
 
 ![image](https://user-images.githubusercontent.com/50459517/109189133-4a766580-7759-11eb-8be0-2e8809e25daa.png)
 
-Looking at the source code of **[test.py](http://test.py)**, I see that it simply opens the file **test.txt** and writes some data in it.  However **test.txt** is owned by root, so even though we are the owner of the script, we need to run this as root to actually write to the file.  However after a few minutes we notice that the **test.txt** file has a new "last modified" time on it, indicating that we have a cron job executing the **test.py** script.
+Looking at the source code of **test.py**, I see that it simply opens the file **test.txt** and writes some data in it.  However **test.txt** is owned by root, so even though we are the owner of the script, we need to run this as root to actually write to the file.  However after a few minutes we notice that the **test.txt** file has a new "last modified" time on it, indicating that we have a cron job executing the **test.py** script.
 
 ![image](https://user-images.githubusercontent.com/50459517/109189159-55c99100-7759-11eb-99a8-1f0d542d68f2.png)
 
