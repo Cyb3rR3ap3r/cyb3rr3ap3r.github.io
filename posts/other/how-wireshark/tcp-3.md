@@ -45,3 +45,5 @@ Here we see some of the details in packet 3.  As we can see, the Source IP is ag
 # Conclusion
 
 That's it.  An overview of the TCP 3 way handshake.  As we continue to understand other network activities, you will see this handshake quite often as all TCP communications start with it.  Next we will take a look at a popular tool called Nmap and how some of its various features work.
+
+**[Next Post in this Series](https://cyb3rr3ap3r.github.io/posts/other/how-wireshark/tcp-3.html)**  
