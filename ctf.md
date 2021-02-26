@@ -25,3 +25,4 @@ permalink: /ctf.html
 ----
 ## HackTheBox
 **[Bashed - Linux](https://cyb3rr3ap3r.github.io/posts/ctf/hackthebox/bashed.html)**  
+**[Bastard - Windows](https://cyb3rr3ap3r.github.io/posts/ctf/hackthebox/bastard.html)**  
