@@ -29,7 +29,7 @@ Now that we have a version, lets research and see if we can find a public exploi
 
 Here is the PoC I used for CVE-2018-7600.  
 
-[pimps/CVE-2018-7600](https://github.com/pimps/CVE-2018-7600)
+[https://github.com/pimps/CVE-2018-7600](https://github.com/pimps/CVE-2018-7600)
 
 Pretty straight forward exploit, Lets try it out.
 
@@ -45,7 +45,7 @@ Looks like we have code execution!  Lets see if we can get a shell now.  I hoste
 
 We are in.  I copied WinPEAS over but couldn't get the executable to run, probably a .NET issue.  I ran the .bat version but didn't find much so decided to run WinPrivChecker and found a number of possible kernel exploits.  I like abatchy17's GitHub collection of kernel exploits found here..
 
-[abatchy17/WindowsExploits](https://github.com/abatchy17/WindowsExploits)
+[https://github.com/abatchy17/WindowsExploits](https://github.com/abatchy17/WindowsExploits)
 
 ![image](https://user-images.githubusercontent.com/50459517/109317053-e794d500-7811-11eb-9073-7a842cf70d9c.png)
 
