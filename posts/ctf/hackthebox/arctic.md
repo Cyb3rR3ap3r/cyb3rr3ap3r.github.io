@@ -31,7 +31,8 @@ Following this, it seems that ColdFusion8 is vulnerable to LFI and also you can 
 
 Now that we have the password hash we could try to crack the hash, but we can also just bypass the authentication using the guide in the link above.  We just need to paste the hash into the password form, run some javascript that will output another hash, then load that hash into Tamper Data.  This is time sensitive so you have to be quick so to save time you can save the javascript into a bookmark. 
 
-`javascript:alert(hex_hmac_sha1(document.loginform.salt.value,document.loginform.cfadminPassword.value))`
+`javascript:alert(hex_hmac_sha1(document.loginform.salt.value,`
+`document.loginform.cfadminPassword.value))`
 
 I tired several times to modify the password field via Tamper Data to no luck.  I found better luck modifying with Burp.  Once I completed this I was able to bypass the login.
 
