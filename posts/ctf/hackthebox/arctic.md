@@ -50,7 +50,7 @@ Great!  Now we can run the following command to download NetCat to the machine a
 
 ![image](https://user-images.githubusercontent.com/50459517/110968955-bfcb6400-831d-11eb-8e85-9508247c00cb.png)
 
-I ran WinPrivEsc.bat to see if we can find any potential kernel exploits we can use.  The results told us that the MS10-059 patch is not installed!  Lets copy the MS17-059.exe to the machine and see if it works.
+I ran WinPrivEsc.bat to see if we can find any potential kernel exploits we can use.  The results told us that the MS10-059 patch is not installed!  Lets copy the MS10-059.exe to the machine and see if it works.
 
 ![image](https://user-images.githubusercontent.com/50459517/110968980-c8239f00-831d-11eb-844f-c0a3fab63d2e.png)
 
